@@ -13,6 +13,10 @@
 	padding-left: 30px;
 	cursor: pointer;
 	font-size: 18px;
+	-webkit-user-select: none; 
+	-moz-user-select: none;   
+	-ms-user-select: none;     
+	user-select: none; 
 }
 /* FunCheckbox check mark positioning and styling */
 .checkbox-status .fc-status:after {
