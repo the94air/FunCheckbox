@@ -1,0 +1,75 @@
+/* Fun Check CSS Style Sheet*/
+
+/* hide the real input */
+.fc-contain input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+/* positining the FunCheckbox and the text */
+.fc-contain {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+	font-size: 18px;
+}
+/* FunCheckbox check mark positioning and styling */
+.checkbox-status .fc-status:after {
+    left: 7px;
+    top: 3px;
+    width: 4px;
+    height: 10px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+/* FunCheckbox check mark color if the box was disabled & checked in the same time */
+.checkbox-status input:disabled ~ .fc-status:after {
+	border-color: #7b7b7b;
+}
+/* the FunCheckbox positioning beside the text */
+.fc-status {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background: #e6e6e6;
+	transition: background 0.7s;
+}
+/* the hover and the focus style for the FunCheckbox [not checked] */
+.fc-contain:hover input ~ .fc-status,
+.fc-contain input:focus ~ .fc-status {
+	background: #ccc;
+	transition: background 0.7s;
+}
+/* change the FunCheckbox background color if it is checked and not disabled */
+.fc-contain input:checked ~ .fc-status {
+	background: #2a7ac0;
+	transition: background 0.7s;
+}
+/* the hover and the focus style for the FunCheckbox [checked] */
+.fc-contain:hover input:not([disabled]):checked ~ .fc-status,
+.fc-contain input:checked:focus ~ .fc-status {
+	background: #00529a;
+	transition: background 0.7s;
+}
+/* styling FunCheckbox if it is disabled */
+.fc-contain input:disabled ~ .fc-status {
+	background: #e6e6e6;
+	opacity: 0.6;
+	pointer-events: none;
+	transition: background 0.7s;
+}
+/* Positioning the check mark inside the FunCheckbox */
+.fc-status:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+/* Used to show the FunCheckbox check mark only if the real input checkbox has been checked */
+.fc-contain input:checked ~ .fc-status:after {
+	display: block;
+	transition: display 0.7s;
+}
