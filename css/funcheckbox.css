@@ -1,12 +1,12 @@
 /* Fun Check CSS Style Sheet*/
 
-/* hide the real input */
+/* Hide the real input */
 .fc-contain input {
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
 }
-/* positining the FunCheckbox and the text */
+/* Positioning the FunCheckbox and the text */
 .fc-contain {
 	display: block;
 	position: relative;
@@ -34,7 +34,7 @@
 .checkbox-status input:disabled ~ .fc-status:after {
 	border-color: #7b7b7b;
 }
-/* the FunCheckbox positioning beside the text */
+/* The FunCheckbox positioning beside the text */
 .fc-status {
 	position: absolute;
 	top: 2px;
@@ -44,24 +44,24 @@
 	background: #e6e6e6;
 	transition: background 0.7s;
 }
-/* the hover and the focus style for the FunCheckbox [not checked] */
+/* The hover and the focus style for the FunCheckbox [not checked] */
 .fc-contain:hover input ~ .fc-status,
 .fc-contain input:focus ~ .fc-status {
 	background: #ccc;
 	transition: background 0.7s;
 }
-/* change the FunCheckbox background color if it is checked and not disabled */
+/* Change the FunCheckbox background color if it is checked and not disabled */
 .fc-contain input:checked ~ .fc-status {
 	background: #2a7ac0;
 	transition: background 0.7s;
 }
-/* the hover and the focus style for the FunCheckbox [checked] */
+/* The hover and the focus style for the FunCheckbox [checked] */
 .fc-contain:hover input:not([disabled]):checked ~ .fc-status,
 .fc-contain input:checked:focus ~ .fc-status {
 	background: #00529a;
 	transition: background 0.7s;
 }
-/* styling FunCheckbox if it is disabled */
+/* Styling FunCheckbox if it is disabled */
 .fc-contain input:disabled ~ .fc-status {
 	background: #e6e6e6;
 	opacity: 0.6;
