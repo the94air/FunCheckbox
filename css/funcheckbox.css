@@ -71,5 +71,4 @@
 /* Used to show the FunCheckbox check mark only if the real input checkbox has been checked */
 .fc-contain input:checked ~ .fc-status:after {
 	display: block;
-	transition: display 0.7s;
 }
