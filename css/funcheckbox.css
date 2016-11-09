@@ -23,7 +23,7 @@
 	border: solid #fff;
 	border-width: 0 2px 2px 0;
 	transform: rotate(45deg);
-	/* thanks rcain from Kenan Yusuf website */
+	/* thanks rcain from Kenan Yusuf's website */
 	-webkit-transform: rotate(45deg);
 }
 /* FunCheckbox check mark color if the box was disabled & checked in the same time */
