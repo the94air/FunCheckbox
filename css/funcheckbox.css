@@ -65,7 +65,7 @@
 .fc-contain input:disabled ~ .fc-status {
 	background: #e6e6e6;
 	opacity: 0.6;
-	pointer-events: none;
+	cursor: not-allowed;
 	transition: background 0.7s;
 }
 /* Positioning the check mark inside the FunCheckbox */
