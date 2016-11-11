@@ -9,7 +9,7 @@ opacity: 0;
 }
 /* Positioning the FunCheckbox and the text */
 .fc-contain {
-display: block;
+display: table;
 position: relative;
 padding-left: 30px;
 cursor: pointer;
