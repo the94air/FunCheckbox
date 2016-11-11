@@ -1,80 +1,169 @@
-/* Fun Check CSS Style Sheet*/
+/* Fun Check CSS Style Sheet
+Copyright (c) 2016 Abdalla Mahmoud & Kenan Yusuf - MIT License */
 
 /* Hide the real input */
 .fc-contain input {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
+position: absolute;
+z-index: -1;
+opacity: 0;
 }
 /* Positioning the FunCheckbox and the text */
 .fc-contain {
-	display: block;
-	position: relative;
-	padding-left: 30px;
-	cursor: pointer;
-	font-size: 18px;
-	-webkit-user-select: none; 
-	-moz-user-select: none;   
-	-ms-user-select: none;     
-	user-select: none; 
+display: block;
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+font-size: 18px;
+-webkit-user-select: none; 
+-moz-user-select: none;   
+-ms-user-select: none;     
+user-select: none;
+margin-bottom: 8px;
 }
 /* FunCheckbox check mark positioning and styling */
 .checkbox-status .fc-status:after {
-    	left: 7px;
-    	top: 3px;
-    	width: 4px;
-    	height: 10px;
-	border: solid #fff;
-	border-width: 0 2px 2px 0;
-	transform: rotate(45deg);
-	/* thanks rcain from Kenan Yusuf's website */
-	-webkit-transform: rotate(45deg);
+left: 7px;
+top: 3px;
+width: 4px;
+height: 10px;
+border: solid #fff;
+border-width: 0 2px 2px 0;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
 }
 /* FunCheckbox check mark color if the box was disabled & checked in the same time */
 .checkbox-status input:disabled ~ .fc-status:after {
-	border-color: #7b7b7b;
+border-color: #7b7b7b;
 }
 /* The FunCheckbox positioning beside the text */
 .fc-status {
-	position: absolute;
-	top: 2px;
-	left: 0;
-	height: 20px;
-	width: 20px;
-	background: #e6e6e6;
-	transition: background 0.7s;
+position: absolute;
+top: -2px;
+left: 0;
+height: 20px;
+width: 20px;
+background: #e6e6e6;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
+border: 2px solid #656565;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
 }
 /* The hover and the focus style for the FunCheckbox [not checked] */
 .fc-contain:hover input ~ .fc-status,
 .fc-contain input:focus ~ .fc-status {
-	background: #ccc;
-	transition: background 0.7s;
+background: #ccc;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
 }
 /* Change the FunCheckbox background color if it is checked and not disabled */
 .fc-contain input:checked ~ .fc-status {
-	background: #2a7ac0;
-	transition: background 0.7s;
+background: #5facf1;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
 }
 /* The hover and the focus style for the FunCheckbox [checked] */
 .fc-contain:hover input:not([disabled]):checked ~ .fc-status,
 .fc-contain input:checked:focus ~ .fc-status {
-	background: #00529a;
-	transition: background 0.7s;
+background: #278de8;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
 }
 /* Styling FunCheckbox if it is disabled */
 .fc-contain input:disabled ~ .fc-status {
-	background: #e6e6e6;
-	opacity: 0.6;
-	cursor: not-allowed;
-	transition: background 0.7s;
+background: #e6e6e6;
+opacity: 0.6;
+cursor: not-allowed;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
 }
 /* Positioning the check mark inside the FunCheckbox */
 .fc-status:after {
-	content: '';
-	position: absolute;
-	display: none;
+content: '';
+position: absolute;
+display: none;
 }
 /* Used to show the FunCheckbox check mark only if the real input checkbox has been checked */
 .fc-contain input:checked ~ .fc-status:after {
-	display: block;
+display: block;
+}
+.fc-contain .fc-status:before {
+content: '';
+display: block;
+position: absolute;
+left: 0;
+top: 0;
+width: 48px;
+height: 48px;
+margin-left: -14px;
+margin-top: -15px;
+background: rgba(42, 122, 192, 0.6);
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+opacity: .6;
+z-index: 99999999999;
+-webkit-transform: scale(0);
+-moz-transform:    scale(0);
+-ms-transform:     scale(0);
+-o-transform:      scale(0);
+transform:         scale(0);
+}
+@keyframes ripple {
+0% {
+transform: scale(0);
+}
+20% {
+transform: scale(1);
+}
+100% {
+opacity: 0;
+transform: scale(1);
+}
+}
+@keyframes rippleDuplicate {
+0% {
+transform: scale(0);
+}
+60% {
+transform: scale(1);
+}
+100% {
+opacity: 0;
+transform: scale(1);
+}
+}
+.fc-contain input + .fc-status:before {
+animation: ripple .4s ease-out;
+}
+/* to re-trigger the animation with just CSS, we need to duplicate the keyframes
+*/
+.fc-contain input:checked + .fc-status:before {
+animation-name: rippleDuplicate;
+}
+/* fixes initial animation run, without user input, on page load.
+*/
+.fc-contain .fc-status:before {
+visibility: hidden;
+}
+.fc-contain input:focus + .fc-status:before {
+visibility: visible;
 }
