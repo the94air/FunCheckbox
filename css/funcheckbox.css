@@ -20,10 +20,10 @@
 }
 /* FunCheckbox check mark positioning and styling */
 .checkbox-status .fc-status:after {
-    left: 7px;
-    top: 3px;
-    width: 4px;
-    height: 10px;
+    	left: 7px;
+    	top: 3px;
+    	width: 4px;
+    	height: 10px;
 	border: solid #fff;
 	border-width: 0 2px 2px 0;
 	transform: rotate(45deg);
