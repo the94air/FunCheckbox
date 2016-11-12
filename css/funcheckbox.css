@@ -6,6 +6,12 @@ https://goo.gl/afpURT
 https://goo.gl/MxsV9S
 */
 
+
+*, :after, :before {
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+}
 .fc-contain input, .fc-contain-sm input, .fc-contain-lg input {
 position: absolute;
 z-index: -1;
