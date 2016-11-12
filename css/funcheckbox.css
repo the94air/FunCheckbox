@@ -7,7 +7,9 @@ https://goo.gl/MxsV9S
 */
 
 
-*, :after, :before {
+*, .fc-status:after, .fc-status:before,
+.fc-status-sm:after, .fc-status-sm:before,
+.fc-status-lg:after, .fc-status-lg:before {
 -webkit-box-sizing: content-box;
 -moz-box-sizing: content-box;
 box-sizing: content-box;
