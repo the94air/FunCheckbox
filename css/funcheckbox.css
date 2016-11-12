@@ -7,12 +7,12 @@ https://goo.gl/MxsV9S
 */
 
 
-*, .fc-status:after, .fc-status:before,
-.fc-status-sm:after, .fc-status-sm:before,
-.fc-status-lg:after, .fc-status-lg:before {
--webkit-box-sizing: content-box;
--moz-box-sizing: content-box;
-box-sizing: content-box;
+.fc-contain *, .fc-contain-sm *, .fc-contain-lg *,
+.fc-contain *:before, .fc-contain-sm *:before, .fc-contain-lg *:before,
+.fc-contain *:after, .fc-contain-sm *:after, .fc-contain-lg *:after {
+-webkit-box-sizing: content-box !important;
+-moz-box-sizing: content-box !important;
+box-sizing: content-box !important;
 }
 .fc-contain input, .fc-contain-sm input, .fc-contain-lg input {
 position: absolute;
