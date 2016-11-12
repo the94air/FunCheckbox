@@ -110,9 +110,10 @@ transform: rotate(45deg);
 .checkbox-status input:disabled ~ .fc-status-sm:after,
 .checkbox-status input:disabled ~ .fc-status-lg:after {
 border-color: #7b7b7b;
-}.fc-status {
+}
+.fc-status {
 position: absolute;
-top: 0;
+top: 2px;
 left: 0;
 height: 15px;
 width: 15px;
