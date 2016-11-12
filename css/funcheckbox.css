@@ -6,12 +6,36 @@ https://goo.gl/afpURT
 https://goo.gl/MxsV9S
 */
 
-.fc-contain input {
+.fc-contain input, .fc-contain-sm input, .fc-contain-lg input {
 position: absolute;
 z-index: -1;
 opacity: 0;
 }
 .fc-contain {
+display: table;
+position: relative;
+padding-left: 25px;
+cursor: pointer;
+font-size: 16px;
+-webkit-user-select: none; 
+-moz-user-select: none;   
+-ms-user-select: none;     
+user-select: none;
+margin-bottom: 7px;
+}
+.fc-contain-sm {
+display: table;
+position: relative;
+padding-left: 20px;
+cursor: pointer;
+font-size: 14px;
+-webkit-user-select: none; 
+-moz-user-select: none;   
+-ms-user-select: none;     
+user-select: none;
+margin-bottom: 5px;
+}
+.fc-contain-lg {
 display: table;
 position: relative;
 padding-left: 30px;
@@ -24,6 +48,40 @@ user-select: none;
 margin-bottom: 8px;
 }
 .checkbox-status .fc-status:after {
+left: 5px;
+top: 1px;
+width: 4px;
+height: 9px;
+border: solid #fff;
+border-width: 0 2px 2px 0;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.checkbox-status .fc-status-sm:after {
+left: 4px;
+top: 0px;
+width: 3px;
+height: 8px;
+border: solid #fff;
+border-width: 0 2px 2px 0;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.checkbox-status .fc-status-lg:after {
 left: 7px;
 top: 3px;
 width: 4px;
@@ -40,10 +98,43 @@ transition: background 0.7s;
 -o-transform: rotate(45deg);
 transform: rotate(45deg);
 }
-.checkbox-status input:disabled ~ .fc-status:after {
+.checkbox-status input:disabled ~ .fc-status:after, 
+.checkbox-status input:disabled ~ .fc-status-sm:after,
+.checkbox-status input:disabled ~ .fc-status-lg:after {
 border-color: #7b7b7b;
+}.fc-status {
+position: absolute;
+top: 0;
+left: 0;
+height: 15px;
+width: 15px;
+background: #e6e6e6;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
+border: 1px solid #656565;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
 }
-.fc-status {
+.fc-status-sm {
+position: absolute;
+top: 2px;
+left: 0px;
+height: 12px;
+width: 12px;
+background: #e6e6e6;
+-webkit-transition: background 0.7s;
+-moz-transition: background 0.7s;
+-o-transition: background 0.7s;
+transition: background 0.7s;
+border: 1px solid #656565;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+.fc-status-lg {
 position: absolute;
 top: -2px;
 left: 0;
@@ -54,20 +145,26 @@ background: #e6e6e6;
 -moz-transition: background 0.7s;
 -o-transition: background 0.7s;
 transition: background 0.7s;
-border: 2px solid #656565;
+border: 1px solid #656565;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
 }
 .fc-contain:hover input ~ .fc-status,
-.fc-contain input:focus ~ .fc-status {
+.fc-contain input:focus ~ .fc-status,
+.fc-contain-sm:hover input ~ .fc-status-sm,
+.fc-contain-sm input:focus ~ .fc-status-sm,
+.fc-contain-lg:hover input ~ .fc-status-lg,
+.fc-contain-lg input:focus ~ .fc-status-lg {
 background: #ccc;
 -webkit-transition: background 0.7s;
 -moz-transition: background 0.7s;
 -o-transition: background 0.7s;
 transition: background 0.7s;
 }
-.fc-contain input:checked ~ .fc-status {
+.fc-contain input:checked ~ .fc-status,
+.fc-contain-sm input:checked ~ .fc-status-sm,
+.fc-contain-lg input:checked ~ .fc-status-lg {
 background: #5facf1;
 -webkit-transition: background 0.7s;
 -moz-transition: background 0.7s;
@@ -75,14 +172,20 @@ background: #5facf1;
 transition: background 0.7s;
 }
 .fc-contain:hover input:not([disabled]):checked ~ .fc-status,
-.fc-contain input:checked:focus ~ .fc-status {
+.fc-contain input:checked:focus ~ .fc-status,
+.fc-contain-sm:hover input:not([disabled]):checked ~ .fc-status-sm,
+.fc-contain-sm input:checked:focus ~ .fc-status-sm,
+.fc-contain-lg:hover input:not([disabled]):checked ~ .fc-status-lg,
+.fc-contain-lg input:checked:focus ~ .fc-status-lg {
 background: #278de8;
 -webkit-transition: background 0.7s;
 -moz-transition: background 0.7s;
 -o-transition: background 0.7s;
 transition: background 0.7s;
 }
-.fc-contain input:disabled ~ .fc-status {
+.fc-contain input:disabled ~ .fc-status,
+.fc-contain-sm input:disabled ~ .fc-status-sm,
+.fc-contain-lg input:disabled ~ .fc-status-lg {
 background: #e6e6e6;
 opacity: 0.6;
 cursor: not-allowed;
@@ -91,15 +194,61 @@ cursor: not-allowed;
 -o-transition: background 0.7s;
 transition: background 0.7s;
 }
-.fc-status:after {
+.fc-status:after ,.fc-status-sm:after  ,.fc-status-lg:after{
 content: '';
 position: absolute;
 display: none;
 }
-.fc-contain input:checked ~ .fc-status:after {
+.fc-contain input:checked ~ .fc-status:after,
+.fc-contain-sm input:checked ~ .fc-status-sm:after,
+.fc-contain-lg input:checked ~ .fc-status-lg:after {
 display: block;
 }
-.fc-contain .fc-status:before {
+ .fc-contain .fc-status:before {
+content: '';
+display: block;
+position: absolute;
+left: 1px;
+top: 1px;
+width: 42px;
+height: 42px;
+margin-left: -14px;
+margin-top: -15px;
+background: rgba(42, 122, 192, 0.6);
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+opacity: .6;
+z-index: 99999999999;
+-webkit-transform: scale(0);
+-moz-transform:    scale(0);
+-ms-transform:     scale(0);
+-o-transform:      scale(0);
+transform:         scale(0);
+}
+ .fc-contain-sm .fc-status-sm:before {
+content: '';
+display: block;
+position: absolute;
+left: 1px;
+top: 1px;
+width: 38px;
+height: 38px;
+margin-left: -14px;
+margin-top: -15px;
+background: rgba(42, 122, 192, 0.6);
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+opacity: .6;
+z-index: 99999999999;
+-webkit-transform: scale(0);
+-moz-transform:    scale(0);
+-ms-transform:     scale(0);
+-o-transform:      scale(0);
+transform:         scale(0);
+}
+ .fc-contain-lg .fc-status-lg:before {
 content: '';
 display: block;
 position: absolute;
@@ -122,38 +271,50 @@ z-index: 99999999999;
 transform:         scale(0);
 }
 @keyframes ripple {
-0% {
-transform: scale(0);
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
-20% {
-transform: scale(1);
-}
-100% {
-opacity: 0;
-transform: scale(1);
-}
-}
+
 @keyframes rippleDuplicate {
-0% {
-transform: scale(0);
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
-60% {
-transform: scale(1);
-}
-100% {
-opacity: 0;
-transform: scale(1);
-}
-}
-.fc-contain input + .fc-status:before {
+.fc-contain input + .fc-status:before,
+.fc-contain-sm input + .fc-status-sm:before,
+.fc-contain-lg input + .fc-status-lg:before {
 animation: ripple .4s ease-out;
 }
-.fc-contain input:checked + .fc-status:before {
+.fc-contain input:checked + .fc-status:before,
+.fc-contain-sm input:checked + .fc-status-sm:before,
+.fc-contain-lg input:checked + .fc-status-lg:before {
 animation-name: rippleDuplicate;
 }
-.fc-contain .fc-status:before {
+.fc-contain .fc-status:before,
+.fc-contain-sm .fc-status-sm:before,
+.fc-contain-lg .fc-status-lg:before {
 visibility: hidden;
 }
-.fc-contain input:focus + .fc-status:before {
+.fc-contain input:focus + .fc-status:before,
+.fc-contain-sm input:focus + .fc-status-sm:before,
+.fc-contain-lg input:focus + .fc-status-lg:before {
 visibility: visible;
 }
