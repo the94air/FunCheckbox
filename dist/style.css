@@ -117,3 +117,13 @@ margin: 40px 0;
 .logo {
 width: 80px;
 }
+.ivo {
+color: #000;
+font-family: 'Courgette';
+}
+.ivo:hover, .ivo:active {
+text-decoration: none;
+}
+.ivo:focus {
+text-decoration: underline;
+}
