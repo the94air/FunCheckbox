@@ -113,3 +113,6 @@ text-decoration: none;
 a:focus, a:hover {
     text-decoration: none;
 }
+.clickable {
+   cursor: pointer;   
+}
