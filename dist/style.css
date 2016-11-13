@@ -97,9 +97,6 @@ width: 80px;
 color: #000;
 font-family: 'Courgette';
 }
-.ivo:hover, .ivo:active {
+.ivo:hover, .ivo:active, .ivo:focus {
 text-decoration: none;
-}
-.ivo:focus {
-text-decoration: underline;
 }
