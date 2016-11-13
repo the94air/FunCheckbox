@@ -80,6 +80,9 @@ text-shadow: 0 1px 0 #4190AF;
 color: #09232F;
 font-size: 27px;
 }
+.fa-heart {
+color: #e00000;
+}
 .middle-header > .button {
 display: table-cell;
 vertical-align: middle;
