@@ -5,35 +5,8 @@ body {
 margin: 0;
 font-family: 'Varela Round', georgia;
 height: 100%;
-background: linear-gradient(270deg, #b1dcff, #7cbff5, #83b1ff);
-background-size: 600% 600%;
--webkit-animation: AnimationName 48s ease infinite;
--moz-animation: AnimationName 48s ease infinite;
--o-animation: AnimationName 48s ease infinite;
-animation: AnimationName 48s ease infinite;
+background-color: #83b1ff;
 text-shadow: 0px 1px 1px #fff;
-}
-@-webkit-keyframes AnimationName {
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationName {
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-@-o-keyframes AnimationName {
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-@keyframes AnimationName { 
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-main {
 }
 .navbar {
 margin-bottom: 0;
