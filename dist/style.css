@@ -83,6 +83,16 @@ font-size: 27px;
 .fa-heart {
 color: #e00000;
 }
+.my-link {
+border-bottom: 1px #000 dotted;
+text-decoration: none;
+color: #000;
+}
+.my-link:hover, .my-link:active {
+border-bottom: 0;
+text-decoration: none;
+color: #000;
+}
 .middle-header > .button {
 display: table-cell;
 vertical-align: middle;
