@@ -1,44 +1,198 @@
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-<script>
-  WebFont.load({
-    google: {
-      families: ['Varela Round']
-    }
-  });
-</script>
-<link rel="stylesheet" type="text/css" href="css/funcheckbox.css">
-<style type="text/css">
-body {
-margin: 0;
-font-family: 'Varela Round', georgia;
-background-color: #b1dcff;
-text-shadow: 0px 1px 1px #fff;
-}
-main {
-margin-left: 40%;
-}
-h1 {
-margin-top: 100px;
-margin-bottom: 80px;
-text-align: center;
-}
-</style>
-<h1>Simple fun checkbox CSS libarary</h1>
-<main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="A new way to style your Html checkboxes">
+  <title>Fun Checkbox CSS Libarary</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Varela Round']
+      }
+    });
+  </script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/funcheckbox.css">
+  <link rel="stylesheet" type="text/css" href="dist/style.css">
+</head>
+<body>
+<style>#forkongithub a{background:#014a6c;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#09232f;;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:fixed;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:40px;right:-40px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style><span id="forkongithub"><a href="https://github.com/the94air/FunCheckbox">Fork me on GitHub</a></span>
+<header class="middle-header container">
+  <div class="button">
+  <h1 class="text-center">Simple fun checkbox CSS libarary</h1>
+  <a href="https://github.com/the94air/FunCheckbox/archive/master.zip" class="download text-center"><i class="fa fa-download "></i> Download </a><br><br>
+  <a class="github-button" href="https://github.com/the94air" aria-label="Follow @the94air on GitHub">Follow @the94air</a>
+  <a class="github-button" href="https://github.com/the94air/FunCheckbox" aria-label="Fun Checkbox">Star</a>
+  <a href="https://twitter.com/abdalla__arbab" class="twitter-follow-button" data-show-count="false">Follow @abdalla__arbab</a><script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</header>
+<main class="container">
+<h2 class="text-center">Easy to use</h2>
+<p class="text-center">Just add the css file</p>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+<pre>
+&#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/funcheckbox.css&#x22;&#x3E;
+</pre>
+</div>
+</div>
+<h2 class="text-center">Demo</h2>
+<h3>Large Size</h3>
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+<label class="fc-contain-lg checkbox-status">First checkbox
+  <input type="checkbox" checked>
+  <div class="fc-status-lg"></div>
+</label>
+<pre>
+&#x3C;label class=&#x22;fc-contain-lg checkbox-status&#x22;&#x3E;First checkbox
+  &#x3C;input type=&#x22;checkbox&#x22; checked&#x3E;
+  &#x3C;div class=&#x22;fc-status-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+<label class="fc-contain-lg checkbox-status">Second checkbox
+  <input type="checkbox">
+  <div class="fc-status-lg"></div>
+</label>
+<pre>
+&#x3C;label class=&#x22;fc-contain-lg checkbox-status&#x22;&#x3E;Second checkbox
+  &#x3C;input type=&#x22;checkbox&#x22;&#x3E;
+  &#x3C;div class=&#x22;fc-status-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+<label class="fc-contain-lg checkbox-status">Disabled
+  <input type="checkbox" disabled>
+  <div class="fc-status-lg"></div>
+</label>
+<pre>
+&#x3C;label class=&#x22;fc-contain-lg checkbox-status&#x22;&#x3E;Disabled
+  &#x3C;input type=&#x22;checkbox&#x22; disabled&#x3E;
+  &#x3C;div class=&#x22;fc-status-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+<label class="fc-contain-lg checkbox-status">Disabled & checked
+  <input type="checkbox" disabled checked>
+  <div class="fc-status-lg"></div>
+</label>
+<pre>
+&#x3C;label class=&#x22;fc-contain-lg checkbox-status&#x22;&#x3E;Disabled &#x26; checked
+  &#x3C;input type=&#x22;checkbox&#x22; disabled checked&#x3E;
+  &#x3C;div class=&#x22;fc-status-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+</div>
+</div>
+<hr>
+<h3>Normal Size</h3>
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 <label class="fc-contain checkbox-status">First checkbox
-  <input type="checkbox" checked="checked"/>
+  <input type="checkbox" checked>
   <div class="fc-status"></div>
 </label>
+<pre>
+&#x3C;label class=&#x22;fc-contain checkbox-status&#x22;&#x3E;First checkbox
+  &#x3C;input type=&#x22;checkbox&#x22; checked&#x3E;
+  &#x3C;div class=&#x22;fc-status&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
 <label class="fc-contain checkbox-status">Second checkbox
-  <input type="checkbox"/>
+  <input type="checkbox">
   <div class="fc-status"></div>
 </label>
+<pre>
+&#x3C;label class=&#x22;fc-contain checkbox-status&#x22;&#x3E;Second checkbox
+  &#x3C;input type=&#x22;checkbox&#x22;&#x3E;
+  &#x3C;div class=&#x22;fc-status&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 <label class="fc-contain checkbox-status">Disabled
-  <input type="checkbox" disabled="disabled"/>
+  <input type="checkbox" disabled>
   <div class="fc-status"></div>
 </label>
+<pre>
+&#x3C;label class=&#x22;fc-contain checkbox-status&#x22;&#x3E;Disabled
+  &#x3C;input type=&#x22;checkbox&#x22; disabled&#x3E;
+  &#x3C;div class=&#x22;fc-status&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
 <label class="fc-contain checkbox-status">Disabled & checked
-  <input type="checkbox" disabled="disabled" checked="checked"/>
+  <input type="checkbox" disabled checked>
   <div class="fc-status"></div>
 </label>
+<pre>
+&#x3C;label class=&#x22;fc-contain checkbox-status&#x22;&#x3E;Disabled &#x26; checked
+  &#x3C;input type=&#x22;checkbox&#x22; disabled checked&#x3E;
+  &#x3C;div class=&#x22;fc-status&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+</div>
+</div>
+<hr>
+<h3>Small Size</h3>
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+<label class="fc-contain-sm checkbox-status">First checkbox
+  <input type="checkbox" checked>
+  <div class="fc-status-sm"></div>
+</label>
+<pre>
+&#x3C;label class=&#x22;fc-contain-sm checkbox-status&#x22;&#x3E;First checkbox
+  &#x3C;input type=&#x22;checkbox&#x22; checked&#x3E;
+  &#x3C;div class=&#x22;fc-status-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+<label class="fc-contain-sm checkbox-status">Second checkbox
+  <input type="checkbox">
+  <div class="fc-status-sm"></div>
+</label>
+<pre>
+&#x3C;label class=&#x22;fc-contain-sm checkbox-status&#x22;&#x3E;Second checkbox
+  &#x3C;input type=&#x22;checkbox&#x22;&#x3E;
+  &#x3C;div class=&#x22;fc-status-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+<label class="fc-contain-sm checkbox-status">Disabled
+  <input type="checkbox" disabled>
+  <div class="fc-status-sm"></div>
+</label>
+<pre>
+&#x3C;label class=&#x22;fc-contain-sm checkbox-status&#x22;&#x3E;Disabled
+  &#x3C;input type=&#x22;checkbox&#x22; disabled&#x3E;
+  &#x3C;div class=&#x22;fc-status-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+<label class="fc-contain-sm checkbox-status">Disabled & checked
+  <input type="checkbox" disabled checked>
+  <div class="fc-status-sm"></div>
+</label>
+<pre>
+&#x3C;label class=&#x22;fc-contain-sm checkbox-status&#x22;&#x3E;Disabled &#x26; checked
+  &#x3C;input type=&#x22;checkbox&#x22; disabled checked&#x3E;
+  &#x3C;div class=&#x22;fc-status-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/label&#x3E;
+</pre>
+</div>
+</div>
 </main>
+<footer>
+  <div class="container">
+  <a href="https://github.com/">
+  <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-256.png" class="logo img-responsive center-block">
+  </a>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
