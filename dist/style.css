@@ -98,6 +98,9 @@ color: #000;
 display: table-cell;
 vertical-align: middle;
 }
+.well {
+text-shadow: none;
+}
 hr {
 border-top: 1px solid rgba(1, 74, 108, 0.5);
 }
