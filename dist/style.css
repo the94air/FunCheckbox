@@ -100,3 +100,6 @@ font-family: 'Courgette';
 .ivo:hover, .ivo:active, .ivo:focus {
 text-decoration: none;
 }
+a:focus, a:hover {
+    text-decoration: none;
+}
