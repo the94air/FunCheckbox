@@ -100,6 +100,7 @@ vertical-align: middle;
 }
 .well {
 text-shadow: none;
+font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 hr {
 border-top: 1px solid rgba(1, 74, 108, 0.5);
