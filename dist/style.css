@@ -1,0 +1,120 @@
+html {
+height: 100%;
+} 
+body {
+margin: 0;
+font-family: 'Varela Round', georgia;
+height: 100%;
+background: linear-gradient(270deg, #b1dcff, #7cbff5, #83b1ff);
+background-size: 600% 600%;
+-webkit-animation: AnimationName 48s ease infinite;
+-moz-animation: AnimationName 48s ease infinite;
+-o-animation: AnimationName 48s ease infinite;
+animation: AnimationName 48s ease infinite;
+text-shadow: 0px 1px 1px #fff;
+}
+@-webkit-keyframes AnimationName {
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+main {
+}
+.navbar {
+margin-bottom: 0;
+}
+.middle-header {
+width: 100%;
+height: 100%;
+display: table;
+text-align: center;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.middle-header > h1 {
+display: table-cell;
+vertical-align: middle;
+}
+h1 {
+margin-top: 10px;
+}
+.download {
+width: 240px;
+height: 60px;
+line-height: 60px;
+color: white;
+text-decoration: none;
+font-size: 30px;
+/* font-weight: bold; */
+display: inline-block;
+text-align: center;
+position: relative;
+/* BACKGROUND GRADIENTS */
+background: #014464;
+background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0E658E), color-stop(.5, #0C577A), color-stop(.5, #014D71), to(#003E5C)); 
+/* BORDER RADIUS */
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+border: 1px solid #368DBE;
+border-top: 1px solid #c3d6df;
+/* TEXT SHADOW */
+text-shadow: 1px 1px 1px black;
+/* BOX SHADOW */
+-moz-box-shadow: 0 1px 3px black;
+-webkit-box-shadow: 0 1px 3px black;
+box-shadow: 0 1px 3px black;
+-webkit-user-select: none; 
+-moz-user-select: none;   
+-ms-user-select: none;     
+user-select: none;
+}
+/* WHILE HOVERED */
+.download:hover {
+background: #014464;
+background: -moz-linear-gradient(top, #0c5f85, #0b5273 50%, #024869 51%, #003853);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0c5f85), color-stop(.5, #0b5273), color-stop(.51, #024869), to(#003853));
+text-decoration: none;
+color: white;
+}
+.download:active {
+-moz-box-shadow: 0 2px 6px black;
+-webkit-box-shadow: 0 2px 6px black;
+text-decoration: none;
+color: white;
+}
+.download:focus {
+text-decoration: none;
+color: white;
+}
+.fa-download {
+text-shadow: 0 1px 0 #4190AF;
+color: #09232F;
+font-size: 27px;
+}
+.middle-header > .button {
+display: table-cell;
+vertical-align: middle;
+}
+footer {
+margin: 40px 0;
+}
+.logo {
+width: 50px;
+height: 50px;
+}
