@@ -10,12 +10,12 @@ text-shadow: 0px 1px 1px #fff;
 }
 ::-moz-selection {
 text-shadow: none;
-background: blue;
+background: rgba(1, 74, 108, 0.5);
 color: white;
 }
 ::selection {
 text-shadow: none;
-background: blue;
+background: rgba(1, 74, 108, 0.5);
 color: white; 
 }
 .navbar {
