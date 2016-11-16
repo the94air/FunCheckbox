@@ -8,6 +8,16 @@ height: 100%;
 background-color: #e8c477;
 text-shadow: 0px 1px 1px #fff;
 }
+::-moz-selection {
+text-shadow: none;
+background: blue;
+color: white;
+}
+::selection {
+text-shadow: none;
+background: blue;
+color: white; 
+}
 .navbar {
 margin-bottom: 0;
 }
