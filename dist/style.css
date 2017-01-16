@@ -9,14 +9,13 @@ background-color: #e8c477;
 text-shadow: 0px 1px 1px #fff;
 }
 ::-moz-selection {
-text-shadow: none;
-background: rgba(1, 74, 108, 0.5);
-color: white;
+    background: #b3d4fc;
+    text-shadow: none;
 }
+
 ::selection {
-text-shadow: none;
-background: rgba(1, 74, 108, 0.5);
-color: white; 
+    background: #b3d4fc;
+    text-shadow: none;
 }
 .navbar {
 margin-bottom: 0;
